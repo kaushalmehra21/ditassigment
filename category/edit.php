@@ -5,9 +5,7 @@ $Helper = new Helper;
 <?php include(ROOT_DIR . 'includes/sidebar.php'); ?>
 <?php
 $id = $_GET['id'];
-echo $sql = "SELECT * FROM categories WHERE id = '$id'";
-$result = $conn->query($sql);
-$category = $result->fetch_assoc();
+
 /* Add queries here */
 if (isset($_POST) && !empty($_POST)) {
     //$Helper->_ddd($_POST);
@@ -32,7 +30,9 @@ if (isset($_POST) && !empty($_POST)) {
         $msg =  '<span class="dander">Not Update! Alredy Exist</span>';
     }
 }
-
+$sql = "SELECT * FROM categories WHERE id = '$id'";
+$result = $conn->query($sql);
+$category = $result->fetch_assoc();
 ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">

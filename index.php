@@ -1,10 +1,12 @@
-<?php include('includes/autoload.php'); ?>
+<?php include('autoload.php'); ?>
 <?php include('includes/header.php'); ?>
 <?php include('includes/sidebar.php'); ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
-  <?php $UiHelper->breadcum(); ?>
+  <?php
+  $Helper = new Helper;
+  $Helper->breadcum(); ?>
   <!-- /.content-header -->
 
   <!-- Main content -->
